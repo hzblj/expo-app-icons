@@ -1,0 +1,9 @@
+{
+  "platforms": ["apple", "android"],
+  "apple": {
+    "modules": ["ExpoAppIconsModule"]
+  },
+  "android": {
+    "modules": ["com.hzblj.expoappicons.ExpoAppIconsModule"]
+  }
+}

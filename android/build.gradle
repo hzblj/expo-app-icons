@@ -1,0 +1,22 @@
+plugins {
+  id 'com.android.library'
+  id 'expo-module-gradle-plugin'
+}
+
+group = 'com.hzblj.expoappicons'
+version = '0.1.0'
+
+android {
+  namespace "com.hzblj.expoappicons"
+  defaultConfig {
+    versionCode 1
+    versionName "0.1.0"
+  }
+  lintOptions {
+    abortOnError false
+  }
+}
+
+dependencies {
+  implementation 'androidx.lifecycle:lifecycle-process:2.9.3'
+}

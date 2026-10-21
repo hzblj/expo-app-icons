@@ -1,0 +1,90 @@
+{
+  "name": "@hzblj/expo-app-icons",
+  "version": "0.1.0",
+  "description": "Alternate app icons for Expo: a config plugin that generates them and a native module that switches them at runtime on iOS and Android.",
+  "author": "Jan Blazej",
+  "license": "MIT",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./build/index.d.ts",
+      "default": "./build/index.js"
+    },
+    "./plugin": {
+      "types": "./plugin/build/index.d.ts",
+      "default": "./plugin/build/index.js"
+    },
+    "./app.plugin.js": "./app.plugin.js",
+    "./expo-module.config.json": "./expo-module.config.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "android/build.gradle",
+    "android/src/**",
+    "app.plugin.js",
+    "build",
+    "expo-module.config.json",
+    "ios",
+    "plugin/build/**"
+  ],
+  "keywords": [
+    "alternate-icons",
+    "android",
+    "app-icon",
+    "config-plugin",
+    "expo",
+    "expo-module",
+    "icon",
+    "ios",
+    "launcher-icon",
+    "react-native"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hzblj/expo-app-icons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hzblj/expo-app-icons/issues"
+  },
+  "homepage": "https://github.com/hzblj/expo-app-icons#readme",
+  "scripts": {
+    "build": "rm -rf build plugin/build && tsc -p tsconfig.build.json && tsc -p plugin/tsconfig.json",
+    "changeset": "changeset",
+    "changeset:version": "changeset version",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "prepack": "yarn build",
+    "release": "changeset publish",
+    "test": "node --import tsx --test plugin/test/*.test.ts",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@expo/image-utils": "^0.11.6 || ^0.12.0",
+    "jimp-compact": "0.16.1"
+  },
+  "peerDependencies": {
+    "expo": ">=57",
+    "react": "*",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.4",
+    "@changesets/changelog-github": "0.7.0",
+    "@changesets/cli": "2.31.1",
+    "@hzblj/biome-config": "^0.2.1",
+    "@types/node": "^22.19.0",
+    "@types/react": "~19.2.14",
+    "expo": "~57.0.30",
+    "react": "19.2.3",
+    "react-native": "0.86.3",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "xcode": "^3.0.1"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "packageManager": "yarn@4.18.0"
+}
