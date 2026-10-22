@@ -100,6 +100,10 @@ internal class AppIconSwitcher(private val context: Context) {
       .map { it.component to enabledState(it, it.name == name) }
       .filter { (component, state) -> packageManager.getComponentEnabledSetting(component) != state }
 
+    if (changes.isEmpty()) {
+      return
+    }
+
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
       packageManager.setComponentEnabledSettings(
         changes.map { (component, state) ->

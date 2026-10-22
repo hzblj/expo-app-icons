@@ -3,6 +3,7 @@ package com.hzblj.expoappicons
 import android.content.Context
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ProcessLifecycleOwner
@@ -10,6 +11,8 @@ import expo.modules.kotlin.exception.Exceptions
 import expo.modules.kotlin.modules.Module
 import expo.modules.kotlin.modules.ModuleDefinition
 import kotlin.concurrent.thread
+
+private const val TAG = "ExpoAppIcons"
 
 class ExpoAppIconsModule : Module() {
   private val context: Context
@@ -21,7 +24,13 @@ class ExpoAppIconsModule : Module() {
 
   private val backgroundObserver = object : DefaultLifecycleObserver {
     override fun onStop(owner: LifecycleOwner) {
-      thread(name = "ExpoAppIcons") { switcher.applyPending() }
+      runInBackground("applyPending") { switcher.applyPending() }
+    }
+  }
+
+  private fun runInBackground(name: String, block: () -> Unit) {
+    thread(name = TAG) {
+      runCatching(block).onFailure { Log.w(TAG, "$name failed", it) }
     }
   }
 
@@ -29,7 +38,7 @@ class ExpoAppIconsModule : Module() {
     Name("ExpoAppIcons")
 
     OnCreate {
-      thread(name = "ExpoAppIcons") { switcher.repair() }
+      runInBackground("repair") { switcher.repair() }
       mainHandler.post { ProcessLifecycleOwner.get().lifecycle.addObserver(backgroundObserver) }
     }
 
