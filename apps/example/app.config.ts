@@ -106,6 +106,9 @@ export default {
     ['@hzblj/kara-ui', {icons: {source: './assets/icons'}}],
     // Built from packages/expo-app-icons, which is why `yarn prebuild` builds it first.
     ['@hzblj/expo-app-icons', appIcons],
+    // The scene life cycle, which apps built with the iOS 27 SDK need or they stop at launch: Expo 57's template has
+    // none, so React Native starts from Expo's scene delegate instead. Remove it with the move to Expo 58.
+    ['expo-build-properties', {ios: {enableSceneSupport: true}}],
   ],
   scheme: 'app-icons-example',
   slug: 'expo-app-icons-example',
