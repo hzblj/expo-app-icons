@@ -1,6 +1,6 @@
 {
   "name": "@hzblj/expo-app-icons",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Alternate app icons for Expo: a config plugin that generates them and a native module that switches them at runtime on iOS and Android.",
   "author": "Jan Blazej",
   "license": "MIT",

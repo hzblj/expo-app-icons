@@ -1,5 +1,11 @@
 # @hzblj/expo-app-icons
 
+## 0.1.3
+
+### Patch Changes
+
+- [`00d1832`](https://github.com/hzblj/expo-app-icons/commit/00d18329d63ead8083d328cead7210f4e3ec8288) Thanks [@hzblj](https://github.com/hzblj)! - The LICENSE is the complete MIT license, with the limitation of liability it was missing.
+
 ## 0.1.2
 
 ### Patch Changes
