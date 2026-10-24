@@ -127,6 +127,10 @@ The [example app](https://github.com/hzblj/expo-app-icons/tree/main/apps/example
 yarn && yarn prebuild && yarn ios
 ```
 
+## More libraries
+
+The other libraries from the same author are at **[libraries.janblazej.dev](https://www.libraries.janblazej.dev)**.
+
 ## License
 
 MIT © Jan Blazej
