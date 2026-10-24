@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    // The package's TypeScript source, as Metro runs it (metro.config.js maps its `source` export), so the example
+    // type-checks against the package without a build. The config plugin's entry point is its Node build: the
+    // example takes only its option types, from their source.
+    "paths": {
+      "@hzblj/expo-app-icons": ["../../packages/expo-app-icons/src/index.ts"],
+      "@hzblj/expo-app-icons/plugin": ["../../packages/expo-app-icons/plugin/src/types.ts"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts", "native-icons.d.ts"]
+}

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <!-- Mint. A sprout: two leaves, each where two quarter discs of 288 pt overlap, and a 96 pt stem 48 pt below them. -->
+  <defs>
+    <linearGradient id="mint" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#CFF7E4"/>
+      <stop offset="1" stop-color="#86E2BA"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .background { fill: url(#mint) }
+    .ink { fill: #0D5A43 }
+    .dark .ink { fill: #7FE3B8 }
+    .tinted .background { fill: #000 }
+    .tinted .ink { fill: #FFF }
+  </style>
+  <rect class="background" width="1024" height="1024"/>
+  <g class="motif">
+    <path class="ink" d="M224 224a288 288 0 0 1 288 288a288 288 0 0 1-288-288z"/>
+    <path class="ink" d="M512 512a288 288 0 0 1 288-288a288 288 0 0 1-288 288z"/>
+    <rect class="ink" x="464" y="560" width="96" height="240" rx="48"/>
+  </g>
+</svg>

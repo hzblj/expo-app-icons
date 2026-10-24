@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <!-- Sunrise, the example's own icon. A disc of 576 pt whose lower half is cut into two 96 pt bands, 48 pt apart,
+       each fainter than the one above: the sun coming up out of the water. -->
+  <defs>
+    <linearGradient id="warm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FF8A57"/>
+      <stop offset="1" stop-color="#FF4F14"/>
+    </linearGradient>
+    <clipPath id="sun">
+      <circle cx="512" cy="512" r="288"/>
+    </clipPath>
+  </defs>
+  <style>
+    .background { fill: url(#warm) }
+    .ink { fill: #FFF3E8 }
+    .near { opacity: 0.72 }
+    .far { opacity: 0.44 }
+    .dark .ink { fill: #FF7A3D }
+    .tinted .background { fill: #000 }
+    .tinted .ink { fill: #FFF }
+  </style>
+  <rect class="background" width="1024" height="1024"/>
+  <g class="motif" clip-path="url(#sun)">
+    <rect class="ink" x="224" y="224" width="576" height="288"/>
+    <rect class="ink near" x="224" y="560" width="576" height="96"/>
+    <rect class="ink far" x="224" y="704" width="576" height="96"/>
+  </g>
+</svg>

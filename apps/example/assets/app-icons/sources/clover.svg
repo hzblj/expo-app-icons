@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <!-- Clover, Android only. Four circles of 144 pt around a fifth, Material's clover shape. The background is a colour
+       in the plugin's config, not an image: this one is only the preview. -->
+  <style>
+    .background { fill: #E9DDFF }
+    .ink { fill: #4F378B }
+  </style>
+  <rect class="background" width="1024" height="1024"/>
+  <g class="motif">
+    <circle class="ink" cx="512" cy="368" r="144"/>
+    <circle class="ink" cx="656" cy="512" r="144"/>
+    <circle class="ink" cx="512" cy="656" r="144"/>
+    <circle class="ink" cx="368" cy="512" r="144"/>
+    <circle class="ink" cx="512" cy="512" r="144"/>
+  </g>
+</svg>

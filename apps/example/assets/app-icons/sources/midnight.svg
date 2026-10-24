@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <!-- Midnight. A crescent, a 288 pt circle less the same circle 112 pt right and up, and a star in its bite. -->
+  <defs>
+    <linearGradient id="night" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2B3678"/>
+      <stop offset="1" stop-color="#0B1035"/>
+    </linearGradient>
+    <mask id="bite" maskUnits="userSpaceOnUse" x="0" y="0" width="1024" height="1024">
+      <rect width="1024" height="1024" fill="#FFF"/>
+      <circle cx="624" cy="400" r="288" fill="#000"/>
+    </mask>
+  </defs>
+  <style>
+    .background { fill: url(#night) }
+    .ink { fill: #FFE6A6 }
+    .dark .ink { fill: #FFE6A6 }
+    .tinted .background { fill: #000 }
+    .tinted .ink { fill: #FFF }
+  </style>
+  <rect class="background" width="1024" height="1024"/>
+  <g class="motif">
+    <circle class="ink" cx="512" cy="512" r="288" mask="url(#bite)"/>
+    <circle class="ink" cx="696" cy="328" r="48"/>
+  </g>
+</svg>

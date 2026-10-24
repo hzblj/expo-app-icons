@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <!-- Mono. A switch: a 576 by 288 pt track, its knob a 192 pt hole 48 pt from the end. -->
+  <defs>
+    <linearGradient id="ink" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2A2A2D"/>
+      <stop offset="1" stop-color="#0A0A0B"/>
+    </linearGradient>
+    <mask id="knob" maskUnits="userSpaceOnUse" x="0" y="0" width="1024" height="1024">
+      <rect width="1024" height="1024" fill="#FFF"/>
+      <circle cx="656" cy="512" r="96" fill="#000"/>
+    </mask>
+  </defs>
+  <style>
+    .background { fill: url(#ink) }
+    .ink { fill: #FFF }
+    .tinted .background { fill: #000 }
+  </style>
+  <rect class="background" width="1024" height="1024"/>
+  <g class="motif">
+    <rect class="ink" x="224" y="368" width="576" height="288" rx="144" mask="url(#knob)"/>
+  </g>
+</svg>

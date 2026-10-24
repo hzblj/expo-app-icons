@@ -1,0 +1,26 @@
+import groovy.json.JsonSlurper
+
+plugins {
+  id 'com.android.library'
+  id 'expo-module-gradle-plugin'
+}
+
+def packageJson = new JsonSlurper().parseText(file('../package.json').text)
+
+group = 'com.hzblj.expoappicons'
+version = packageJson.version
+
+android {
+  namespace "com.hzblj.expoappicons"
+  defaultConfig {
+    versionCode 1
+    versionName packageJson.version
+  }
+  lintOptions {
+    abortOnError false
+  }
+}
+
+dependencies {
+  implementation 'androidx.lifecycle:lifecycle-process:2.9.3'
+}

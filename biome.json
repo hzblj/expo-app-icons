@@ -1,21 +1,48 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.5.4/schema.json",
-  "extends": ["@hzblj/biome-config", "@hzblj/biome-config/react-native"],
-  "vcs": {
-    "clientKind": "git",
-    "enabled": true,
-    "useIgnoreFile": true
-  },
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "extends": [
+    "@hzblj/biome-config",
+    "@hzblj/biome-config/react-native"
+  ],
   "files": {
-    "includes": ["**", "!**/build", "!**/node_modules", "!plugin/test/fixtures"]
+    "includes": [
+      "**",
+      "!**/node_modules",
+      "!**/.expo",
+      "!**/.turbo",
+      "!**/.pack-check",
+      "!**/build",
+      "!apps/example/ios",
+      "!apps/example/android",
+      "!**/expo-env.d.ts",
+      "!packages/expo-app-icons/plugin/test/fixtures"
+    ]
   },
   "overrides": [
     {
-      "includes": ["app.plugin.js"],
+      "includes": [
+        "**/babel.config.js",
+        "**/metro.config.js",
+        "**/app.plugin.js"
+      ],
       "linter": {
         "rules": {
-          "correctness": {"noUndeclaredVariables": "off"},
-          "style": {"noCommonJs": "off"}
+          "style": {
+            "noCommonJs": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": [
+        "scripts/**",
+        "apps/example/assets/app-icons/render.mjs"
+      ],
+      "linter": {
+        "rules": {
+          "suspicious": {
+            "noConsole": "off"
+          }
         }
       }
     }
