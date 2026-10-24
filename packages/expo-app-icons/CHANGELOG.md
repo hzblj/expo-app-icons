@@ -1,5 +1,11 @@
 # @hzblj/expo-app-icons
 
+## 0.1.2
+
+### Patch Changes
+
+- [`6bf922d`](https://github.com/hzblj/expo-app-icons/commit/6bf922d02521178c7bfbe8223f8cf3f964c78999) Thanks [@hzblj](https://github.com/hzblj)! - The README links to the other libraries, at libraries.janblazej.dev.
+
 ## 0.1.1
 
 ### Patch Changes
