@@ -5,6 +5,11 @@
 
 Alternate app icons for Expo on iOS and Android. A config plugin generates the icons at prebuild, from PNGs with dark and tinted appearances or Icon Composer documents on iOS and adaptive layers on Android, and a native module switches between them at runtime.
 
+<p>
+  <img alt="The example's icons on iOS, each one generated at prebuild" height="560" src="media/ios-icons.png" />
+  <img alt="The same on Android" height="560" src="media/android-icons.png" />
+</p>
+
 ```sh
 npx expo install @hzblj/expo-app-icons
 ```
