@@ -1,5 +1,11 @@
 # @hzblj/expo-app-icons
 
+## 0.1.4
+
+### Patch Changes
+
+- [`1c5dc5a`](https://github.com/hzblj/expo-app-icons/commit/1c5dc5a4ad477742fc9f4d3cfdd1e034936a16f4) Thanks [@hzblj](https://github.com/hzblj)! - The README shows the example app on iOS and Android.
+
 ## 0.1.3
 
 ### Patch Changes
